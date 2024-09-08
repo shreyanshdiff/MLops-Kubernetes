@@ -6,6 +6,8 @@ Here is the `README.md` file for your project titled **"Machine Failure Classifi
 
 This project demonstrates the deployment of a machine learning model to predict machine failures, integrating various MLOps tools such as Streamlit for a user-friendly interface, Redis for caching, Docker for containerization, and Kubernetes for orchestration. MLflow is used for tracking model performance and metrics, ensuring a full end-to-end pipeline in production.
 
+Link to the Application : https://mlops-kubernetes-c3obagdkuruscnpqgvgwj8.streamlit.app/
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
