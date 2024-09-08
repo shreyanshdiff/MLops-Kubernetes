@@ -57,7 +57,7 @@ This project is designed to classify machine failures using a trained machine le
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/machine-failure-classification
+git clone https://github.com/shreyanshdiff/machine-failure-classification
 cd machine-failure-classification
 ```
 
