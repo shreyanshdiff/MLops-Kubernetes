@@ -31,22 +31,40 @@ def get_prediction(input_data):
         redis_client.set(key , json.dumps(result))
         print("cache miss")
         return result
-if __name__ == '__main__':
-    print("Running inference script...")
+    
+def get_user_input():
+    print("Give the inputs for the prediction of the Machine Failure ")
+    footfall = int(input("FootFall: "))
+    tempMode = int(input("TempMode: "))  # Change TempNode to tempMode
+    AQ = int(input("Air Quality Index: "))
+    USS = int(input("USS: "))
+    CS = int(input("CS: "))
+    VOC = int(input("VOC: "))
+    RP = int(input("RP: "))
+    IP = int(input("IP: "))
+    temperature = int(input("Temperature: "))  # Change Temp to Temperature
+
     input_data = {
-        'footfall': 31,
-        'tempMode': 17,
-        'AQ': 7,
-        'USS': 6,
-        'CS': 5,
-        'VOC':5,
-        'RP': 24,
-        'IP': 4,
-        'Temperature':1
-
-
+        'footfall': footfall,
+        'tempMode': tempMode,  # Use tempMode as seen in training
+        'AQ': AQ,
+        'USS': USS,
+        'CS': CS,
+        'VOC': VOC,
+        'RP': RP,
+        'IP': IP,
+        'Temperature': temperature  # Use Temperature as seen in training
     }
 
+    return input_data
+
+
+if __name__ == '__main__':
+    print("Running inference script...")
+
+    # Get user input
+    input_data = get_user_input()
+
+    # Get the prediction
     result = get_prediction(input_data)
     print("Prediction:", result)
-    
